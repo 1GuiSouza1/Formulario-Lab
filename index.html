@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <title>Formulário</title>
+</head>
+
+<body>
+    <header>
+
+        <h1>Fatec - SALA</h1>
+
+        <div class="busca">
+            <img src="Imagens/search.png" alt="Ícone de pesquisa">
+            <input id="pesquisa" type="text" placeholder="O que está procurando?">
+            <button id="limpa-input" class="btn-limpar" type="button">&times;</button>
+        </div>
+
+        <div id="icons">
+            <i title="Notificações" id="btn-notificacoes" class="fi fi-ss-bell"></i>
+            <i title="Perfil" id="btn-perfil" class="fi fi-ss-circle-user"></i>
+        </div>
+
+    </header>
+
+    <main>
+        
+        <article id="card-cinza">
+            
+            <section id="card-vermelho">
+                <h1>RESERVA DE LABORATÓRIOS</h1>
+            </section>
+           
+            <section id="section-camposObg">
+                <h2>*Campos obrigatórios</h2>
+            </section>
+            
+            
+            <form action="" id="formulario" action="" method="">
+
+                <section class="section-geral">
+                    <h2>Semestre: <span>*</span></h2>
+                </section>
+            
+                <fieldset class="radio-group1">
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre1" name="semestre" required> 
+                        <label for="optionSemestre1"><p>1° Semestre</p></label>
+                    </div>
+
+                    
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre2" name="semestre" required> 
+                        <label for="optionSemestre2"><p>2° Semestre</p></label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre3" name="semestre" required> 
+                        <label for="optionSemestre3"><p>3° Semestre</p></label>
+                    </div>
+
+                    
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre4" name="semestre" required> 
+                        <label for="optionSemestre4"><p>4° Semestre</p></label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre5" name="semestre" required> 
+                        <label for="optionSemestre5"><p>5° Semestre</p></label>
+                    </div>  
+
+                    <div class="radio-option">
+                        <input class="radio" type="radio" id="optionSemestre6" name="semestre" required> 
+                        <label for="optionSemestre6"><p>6° Semestre</p></label>
+                    </div>
+
+                    <div class="error-message" style="color: var(--red-color); font-size: 12px;"></div> <!-- Mensagem de erro -->
+
+                </fieldset>
+
+                <section class="section-geral">
+                    <h2>Disciplina(s): <span>*</span></h2>
+                </section>
+            
+                <section class="box-input-text">
+                    <textarea id="Disciplina" name="disciplina" placeholder="Ex: Banco de Dados Relacional." rows="2" maxlength="100" required></textarea>
+                    <div class="char-count">0/100</div>
+                    <div class="error-message" style="color: var(--red-color); font-size: 12px;"></div> <!-- Mensagem de erro -->
+                </section>
+                
+                <section class="section-geral">
+                    <h2>Motivo da Reserva: <span>*</span></h2>
+                </section>
+            
+                <fieldset class="radio-group2">
+                    <div class="radio-option">
+                        <input type="radio" id="optionMotivo1" name="motivo" required>
+                        <label for="optionMotivo1">Ministração de aula</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio"  id="optionMotivo2" name="motivo" required>
+                        <label for="optionMotivo2">Aplicação de Prova</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio" id="optionMotivo3" name="motivo" required>
+                        <label for="optionMotivo3">Palestra</label>
+                    </div>
+
+                    <div class="radio-option">
+                        <input type="radio" id="optionMotivo4" name="motivo" required>
+                        <label for="optionMotivo4">Outro</label>
+                    </div>
+
+                    <div class="class-outro-motivo">
+                        <input type="text" id="outroMotivo" name="outroMotivo" placeholder="Ex: Eventos, apresentações de trabalho, etc." required>
+                    </div>
+
+                    <div class="error-message" style="color: var(--red-color); font-size: 12px;"></div> <!-- Mensagem de erro -->
+
+                </fieldset>
+            
+                <section class="section-geral">
+                    <h2>Atividade executada: <span>*</span></h2>
+                </section>
+            
+                <section class="box-input-text">
+                    <textarea type="text" id="atividade" name="Atividade" placeholder="Ex: Realização de exercícios práticos sobre a linguagem PHP, etc."  rows="2"  maxlength="100" required></textarea>
+                    <div class="char-count" id="charCount">0/100</div>
+                    <div class="error-message" style="color: var(--red-color); font-size: 12px;"></div> <!-- Mensagem de erro -->
+                </section>
+
+                <section class="section-geral" >
+                    <h2>Equipamentos, ferramentas e materiais: <span>*</span></h2>
+                </section>
+                
+                <section class="box-input-text">
+                    <textarea type="text" id="equipamentos" name="Equipamentos" placeholder="Liste os equipamentos/ferramentas necessárias para a Atividade." rows="2"  maxlength="100" required></textarea>
+                    <div class="char-count" id="charCount">0/100</div>
+                    <div class="error-message" style="color: var(--red-color); font-size: 12px;"></div> <!-- Mensagem de erro -->
+                </section>
+           
+                <section id="section-button">
+                    <button onclick="finalizarReserva()">Finalizar Reserva</button>
+                </section>
+            
+            </form>
+        </article>
+    </main>
+    
+    <script src="form.js"></script>
+    <script src="reserve.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
